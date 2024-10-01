@@ -4,42 +4,28 @@ import CardService from "../../components/Services/Card/CardService.astro";
 import Contactanos from "../../components/Services/Contactanos/Contactanos.astro";
 import Modal from "../../components/modal/Modal.astro";
 import WhatsappButton from "../../components/Whastsapp/WhatsappButton.astro";
-import desarrollo_planes from "../../components/Services/JSON-DATA/Desarrollo/desarrollo_planes.json";
+import desarrollo_planes from "../../components/Services/JSON-DATA/Desarrollo/desarrollo_planes.json" assert { type: "json" };
 ---
 
 <Layout title="Diseño y desarrollo">
-  <div
-    class="pt-0 sm:pt-[60px] pb-10 sm:pb-20 text-black-0 font-gabarito bg-white-0 overflow-x-hidden"
-  >
+  <div class="pt-0 sm:pt-[60px] pb-10 sm:pb-20 text-black-0 font-gabarito bg-white-0 overflow-x-hidden">
     <div class="flex px-14 xl:px-28 pt-5 pb-7 md:pb-20">
       <div class="pt-10 w-full lg:w-[50%]">
-        <h2 class="text-[35px] font-semibold text-blue-0 mb-2">
-          Diseño y desarrollo
-        </h2>
+        <h2 class="text-[35px] font-semibold text-blue-0 mb-2">Diseño y desarrollo</h2>
         <p class="text-[20px] sm:text-[25px] font-semibold">
-          Diseñamos y desarrollados tu sitio web a medida, para que se adapte
-          perfectamente a las necesidades específicas de tu negocio.
+          Diseñamos y desarrollados tu sitio web a medida, para que se adapte perfectamente a las necesidades
+          específicas de tu negocio.
         </p>
       </div>
-      <div
-        class="lg:w-[50%] hidden lg:flex justify-center items-center animate-decService"
-      >
-        <img
-          src="/decoracion diseño y desarrollo.svg"
-          class="drop-shadow-lg shadow-black-0"
-        />
+      <div class="lg:w-[50%] hidden lg:flex justify-center items-center animate-decService">
+        <img src="/decoracion diseño y desarrollo.svg" class="drop-shadow-lg shadow-black-0" />
       </div>
     </div>
 
     <div class="flex justify-center md:space-x-10 flex-wrap">
       {
         desarrollo_planes.map((p) => (
-          <CardService
-            title={p.title}
-            price={p.price}
-            personalized={p.personalized}
-            feature_list={p.feature_list}
-          />
+          <CardService title={p.title} price={p.price} personalized={p.personalized} feature_list={p.feature_list} />
         ))
       }
     </div>
