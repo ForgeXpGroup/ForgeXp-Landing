@@ -1,0 +1,51 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  features: string[];
+  cardType: 'basic' | 'premium' | 'custom'; // Añadido para manejar el tipo de carta
+}
+
+const { title, description, features, cardType } = Astro.props;
+---
+
+<div
+  class={`bg-custom-section-bg w-[374px] h-[460px] rounded-[32px] p-6 flex flex-col justify-between text-white ${cardType === 'custom' ? 'custom-card' : ''}`}
+>
+  <h2 class="text-title font-bold mb-2 text-center font-gabarito text-gray-0">
+    {title}
+  </h2>
+
+  <p class="text-description mb-4 text-center font-gabarito text-white-0">
+    {description}
+  </p>
+
+  {cardType === 'custom' ? (
+    <div class="custom-card-features mb-4 space-y-2 max-h-[150px] overflow-y-auto">
+      {features.map((feature, index) => (
+        <div class="flex items-center space-x-2 text-feature text-gray-0" >
+          <input type="checkbox" id={`feature-${index}`} checked class="h-4 w-4" />
+          <label for={`feature-${index}`} class="font-gabarito">{feature}</label>
+        </div>
+      ))}
+    </div>
+  ) : (
+    <div class="standard-card-features mb-4 space-y-zº2">
+      <ul>
+        {features.slice(0, 4).map((feature) => (
+          <li class="list-disc list-inside font-gabarito text-feature text-gray-0" >
+            {feature}
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
+
+  <a
+    href="#"
+    type="button"
+    class="font-gabarito bg-red-0 text-gray-0 text-buttonCard w-[279px] h-[59px] rounded-full mx-auto mt-4 font-semibold flex items-center justify-center shadow-button-shadow transition-all duration-300 hover:bg-red-1 hover:text-gray-0 hover:shadow-lg"
+  >
+    ¡Comencemos!
+  </a>
+</div>

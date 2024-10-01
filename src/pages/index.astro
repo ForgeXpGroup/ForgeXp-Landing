@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/hero/Hero.astro";
+import AboutView from "../components/About/AboutView.astro";
+import Section from "../components/Services/Section.astro";
+import FAQs from "../components/FAQs/FAQs";
+import pregunta from "../components/FAQs/preguntas.json";
+import WhatsappButton from "../components/Whastsapp/WhatsappButton.astro";
+import ContactForm from "../components/ContactForm/ContactForm.astro";
+---
+
+<Layout title="ForgeXP">
+  <main class="relative">
+    <Hero />
+    <Section />
+    <FAQs client:load questions={pregunta} />
+    <AboutView />
+    <ContactForm />
+    <WhatsappButton />
+  </main>
+</Layout>

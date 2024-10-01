@@ -1,0 +1,21 @@
+---
+import Card from "../Card/Card.astro";
+import services from "../JSON-DATA/services.json";
+---
+
+<div class="flex flex-wrap gap-4 justify-center">
+  {
+    services.map((service) => (
+      <Card
+        title={service.title}
+        description={service.description}
+        description_1={service.description_1}
+        description_2={service.description_2}
+        description_3={service.description_3}
+        features={service.features}
+        type={service.type}
+        route={service.route}
+      />
+    ))
+  }
+</div>

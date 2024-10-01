@@ -1,0 +1,84 @@
+---
+import contactData from "./DataWhatsapp.json";
+
+const { phone, message1, message2 } = contactData.contactInfo;
+---
+
+<div id="whatsappIcon" class="card relative justify-end">
+  <img id="message" src="/mensajewapp.svg" />
+  <a
+    class="social-link4"
+    target="_blank"
+    title="Haz click para comunicarte"
+    href={`https://wa.me/${phone}?text=${encodeURIComponent(message1)}`}
+  >
+    <img src="/logo whatsapp.svg" class="bi bi-whatsapp" />
+  </a>
+</div>
+
+<style>
+  .card {
+    display: flex;
+    height: 200px;
+    width: 200px;
+    position: fixed;
+    right: 1rem; /* Ajuste la posición si es necesario */
+    top: 85%;
+  }
+
+  .social-link4 {
+    filter: drop-shadow(7px 7px 5px rgb(47, 47, 47));
+  }
+
+  .card svg {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .card .social-link4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    color: whitesmoke;
+    font-size: 24px;
+    text-decoration: none;
+    border-radius: 50px;
+  }
+
+  .card svg path {
+    fill: #fff; /* Opcional: Mantener el icono blanco al pasar el mouse */
+  }
+
+  #message {
+    position: absolute;
+    left: 200px;
+    top: 200px;
+    display: none;
+  }
+
+  #whatsappIcon:hover #message {
+    display: block;
+    left: -54px;
+    top: -30px;
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      display: none;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .card {
+      margin-top: 5rem;
+      margin-right: -3.1rem;
+    }
+  }
+</style>

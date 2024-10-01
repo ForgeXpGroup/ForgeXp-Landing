@@ -1,0 +1,39 @@
+---
+import Animation from "./Animation.astro";
+---
+
+<div
+ id="inicio"
+ class="pt-[56px] pb-20 bg-white-0 h-screen w-full lg:px-20 flex flex-col lg:flex-row items-center font-gabarito overflow-hidden relative"
+>
+ <!-- SLOGAN -->
+ <div
+  class="px-4 lg:pb-20 lg:w-[50%] xl:w-[50%] lg:h-[500px] flex flex-col items-center lg:justify-between relative"
+ >
+  <div class="text-center w-screen md:w-[60%] lg:w-[100%] xl:w-[80%] pt-10">
+   <p
+    class="text-black-0 text-[30px] lg:text-[35px] font-semibold drop-shadow-lg w-[90%] sm:w-auto mx-auto"
+   >
+    Impulsa tú negocio en la era de la tecnología con
+   </p>
+   <h2 class="text-blue-1 text-[55px] font-semibold drop-shadow-lg">ForgeXP</h2>
+  </div>
+  <div class="blur-sm scale-95 lg:hidden">
+   <Animation />
+  </div>
+
+  <a
+   href="#servicios"
+   class="bg-red-0 text-white-0 px-10 py-1 rounded-full shadow-lg text-[25px] lg:text-[37px] absolute top-[50%] lg:relative lg:top-auto lg:flex lg:justify-center"
+  >
+   ¡Empezar ahora!
+  </a>
+ </div>
+
+ <!-- ANIMACION -->
+ <div class="hidden lg:flex lg:w-[50%]">
+  <Animation />
+ </div>
+
+ <img src="top services.svg" class="absolute bottom-0 left-0 w-full" />
+</div>

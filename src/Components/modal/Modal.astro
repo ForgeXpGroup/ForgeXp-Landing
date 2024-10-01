@@ -1,0 +1,67 @@
+---
+import { FormModal } from "./FormModal";
+---
+
+<div
+  id="modal"
+  class="hidden fixed inset-0 bg-[#000] bg-opacity-50 flex justify-center items-center z-50"
+>
+  <div id="modal-content" class="bg-black-0 p-8 rounded-3xl flex justify-center relative max-h-max overflow-y-auto md:flex-col sm:flex-col">
+    <div
+      id="closeModalBtn"
+      class="btn absolute top-0 right-0 mr-5 mt-5 text-white-0 text-xl font-bold hover:cursor-pointer"
+    >
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 41 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1.89348 1.26647C2.59671 0.56345 3.55037 0.168518 4.54473 0.168518C5.5391 0.168518 6.49275 0.56345 7.19598 1.26647L20.456 14.5265L33.716 1.26647C34.4232 0.583374 35.3705 0.205395 36.3537 0.213939C37.337 0.222484 38.2775 0.616867 38.9728 1.31215C39.6681 2.00743 40.0625 2.94798 40.071 3.93121C40.0796 4.91445 39.7016 5.86171 39.0185 6.56897L25.7585 19.829L39.0185 33.089C39.7016 33.7962 40.0796 34.7435 40.071 35.7267C40.0625 36.71 39.6681 37.6505 38.9728 38.3458C38.2775 39.0411 37.337 39.4354 36.3537 39.444C35.3705 39.4525 34.4232 39.0746 33.716 38.3915L20.456 25.1315L7.19598 38.3915C6.48872 39.0746 5.54147 39.4525 4.55823 39.444C3.57499 39.4354 2.63444 39.0411 1.93916 38.3458C1.24388 37.6505 0.849498 36.71 0.840954 35.7267C0.83241 34.7435 1.21039 33.7962 1.89348 33.089L15.1535 19.829L1.89348 6.56897C1.19046 5.86574 0.795532 4.91208 0.795532 3.91772C0.795532 2.92335 1.19046 1.9697 1.89348 1.26647Z"
+          fill="#D9D9D9"
+        ></path>
+      </svg>
+    </div>
+
+    <div class="w-full h-full flex flex-col max-h-max">
+      <h2 class="text-3xl text-white-0 font-bold mb-4 font-gabarito text-center">
+        Comencemos con tu plan{" "}
+        <span id="serviceTitle" class="text-blue-1">
+          ...
+        </span>
+      </h2>
+      <div class="h-full w-full flex flex-col gap-8">
+        <FormModal client:visible />
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById('modal');
+  let isMouseDownOutside = false;
+
+  const handleMouseDown = (e) => {
+      if (e.target === modal) {
+          isMouseDownOutside = true;
+      }
+  };
+
+  const handleMouseUp = (e) => {
+      if (e.target === modal && isMouseDownOutside) {
+          modal.classList.add("hidden");
+      }
+      isMouseDownOutside = false;
+  };
+
+  const avoidClickModal = (e) => {
+      e.stopPropagation();
+  };
+
+  modal.addEventListener('mousedown', handleMouseDown);
+  modal.addEventListener('mouseup', handleMouseUp);
+
+  document.getElementById('modal-content').addEventListener('click', avoidClickModal);
+</script>

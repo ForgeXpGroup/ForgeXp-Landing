@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Alejandro Aguero",
+        "position": "Frontend Developer",
+        "linkLin": "https://www.linkedin.com/in/alejandroaguerodev/",
+        "linkGit": "https://github.com/AlejandroAgueroDev",
+        "img": "/Alejandro.jpg"
+    },
+    {
+        "name": "Gabriel Villalba",
+        "position": "Backend Developer",
+        "linkLin": "https://www.linkedin.com/in/gabrielvillalba2023/",
+        "linkGit": "https://github.com/Gabriel-Villalba",
+        "img": "/gabi.jpeg"
+    },
+    {
+        "name": "Matias Camba",
+        "position": "Fullstack Developer",
+        "linkLin": "https://www.linkedin.com/in/matiascamba/",
+        "linkGit": "https://github.com/MatiasCamba",
+        "img": "/mati.jpeg"
+    },
+    {
+        "name": "Gonzalo Baez Noriega",
+        "position": "Backend Developer",
+        "linkLin": "https://www.linkedin.com/in/gonzalo-david-baez-noriega/",
+        "linkGit": "https://github.com/Namilog7",
+        "img": "/gonza.jpeg"
+    },
+    {
+        "name": "Joaquin Klein",
+        "position": "Frontend Developer",
+        "linkLin": "https://www.linkedin.com/in/joaqu%C3%ADn-klein-404b47304/",
+        "linkGit": "https://github.com/KJoaquinklein",
+        "img": "/joa.jpeg"
+    },
+    {
+        "name": "Emmanuel Villalba",
+        "position": "Backend Developer",
+        "linkLin": "https://www.linkedin.com/in/devemmanuelvillalba/",
+        "linkGit": "https://github.com/emmanuelvillalba",
+        "img": "/ema.jpeg"
+    }
+]

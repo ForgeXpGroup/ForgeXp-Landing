@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Diseño y desarrollo",
+        "description": "Creamos tu sitio a medida que se adapta a las necesidades específicas de tu negocio.",
+        "description_1": "Creamos tu sitio a medida que se adapta a las necesidades específicas de tu negocio.",
+        "type": 1,
+        "features": ["Diseño personalizado", "Web y mobile", "Mantenimiento y actualizaciones"],
+        "route": "desarrollo"
+    },
+    {
+        "title": "Mantenimiento",
+        "description": "Nos encargamos de que tu sitio esté siempre actualizado y funcionando sin problemas.",
+        "description_2": "Nos encargamos de que tu sitio esté siempre actualizado y funcionando sin problemas.",
+        "type": 2,
+        "features": ["Actualización de tecnologias", "Adaptación a nuevas tendencias", "Corrección de errores"],
+        "route": "mantenimiento"
+    },
+    {
+        "title": "Auditoría",
+        "description": "SEO en la página, optimización del rendimiento y usabilidad",
+        "description_3": "Asesoría sobre posicionamiento de tú sitio y optimización al máximo de performance.",
+        "type": 3,
+        "features": ["Mejor experiencia de usuario", "Escalabilidad", "Recomendaciones"],
+        "route": "auditoria"
+    }
+]

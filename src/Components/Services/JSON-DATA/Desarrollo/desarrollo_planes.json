@@ -1,0 +1,84 @@
+[
+    {
+        "title": "Básico",
+        "price": "Desde AR$199.000",
+        "personalized": false,
+        "feature_list": [
+            {
+                "text": "Diseño adaptable y posicionamiento SEO",
+                "valid": true
+            },
+            {
+                "text": "Reuniones semanales con el equipo de desarrollo",
+                "valid": true
+            },
+            {
+                "text": "Despliegue de prueba",
+                "valid": true
+            },
+            {
+                "text": "Pasarela de pagos",
+                "valid": false
+            },
+            {
+                "text": "Mantenimiento y seguimiento",
+                "valid": false
+            }
+        ]
+    },
+    {
+        "title": "Premium",
+        "price": "Desde AR$399.000",
+        "personalized": false,
+        "feature_list": [
+            {
+                "text": "Diseño adaptable y posicionamiento SEO",
+                "valid": true
+            },
+            {
+                "text": "Reuniones semanales con el equipo de desarrollo",
+                "valid": true
+            },
+            {
+                "text": "Despliegue de prueba",
+                "valid": true
+            },
+            {
+                "text": "Pasarela de pagos",
+                "valid": true
+            },
+            {
+                "text": "Mantenimiento y seguimiento",
+                "valid": true
+            }
+        ]
+    },
+    {
+        "title": "Personalizado",
+        "price": "Desde AR$199.000",
+        "personalized": true,
+        "feature_list": [
+            {
+                "text": "Diseño adaptable y posicionamiento SEO",
+                "valid": true
+            },
+            {
+                "text": "Reuniones semanales con el equipo de desarrollo",
+                "valid": true
+            },
+            {
+                "text": "Despliegue de prueba",
+                "valid": true
+            },
+            {
+                "text": "Pasarela de pagos",
+                "valid": true
+            },
+            {
+                "text": "Mantenimiento y seguimiento",
+                "valid": true
+            }
+    
+        ]
+    }
+]

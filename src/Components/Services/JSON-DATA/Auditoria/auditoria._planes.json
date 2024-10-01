@@ -1,0 +1,83 @@
+[
+    {
+        "title": "Básico",
+        "price": "Desde AR$59.000",
+        "personalized": false,
+        "feature_list": [
+            {
+                "text": "Recomendación de rendimiento",
+                "valid": true
+            },
+            {
+                "text": "Recomendación de mantenimiento",
+                "valid": true
+            },
+            {
+                "text": "Reunión con el equipo de desarrollo para revisar cambios",
+                "valid": true
+            },
+            {
+                "text": "Recomendación de usabilidad",
+                "valid": false
+            },
+            {
+                "text": "Recomendación de SEO",
+                "valid": false
+            }
+        ]
+    },
+    {
+        "title": "Premium",
+        "price": "Desde AR$199.000",
+        "personalized": false,
+        "feature_list": [
+            {
+                "text": "Recomendación de rendimiento",
+                "valid": true
+            },
+            {
+                "text": "Recomendación de mantenimiento",
+                "valid": true
+            },
+            {
+                "text": "Reunión con el equipo de desarrollo para revisar cambios",
+                "valid": true
+            },
+            {
+                "text": "Recomendación de usabilidad",
+                "valid": true
+            },
+            {
+                "text": "Recomendación de SEO",
+                "valid": true
+            }
+        ]
+    },
+    {
+        "title": "Personalizado",
+        "price": "Desde AR$59.000",
+        "personalized": true,
+        "feature_list": [
+            {
+                "text": "Recomendación de rendimiento",
+                "valid": true
+            },
+            {
+                "text": "Recomendación de mantenimiento",
+                "valid": true
+            },
+            {
+                "text": "Reunión con el equipo de desarrollo para revisar cambios",
+                "valid": true
+            },
+            {
+                "text": "Recomendación de usabilidad",
+                "valid": true
+            },
+            {
+                "text": "Recomendación de SEO",
+                "valid": true
+            }
+        ]
+    }
+]

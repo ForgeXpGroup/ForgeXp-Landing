@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "question": "¿Qué servicios ofrece ForgeXp?",
+        "response": "En ForgeXp, ofrecemos una amplia gama de servicios que incluyen diseño y desarrollo de páginas web, creación de ecommerce, mantenimiento de sitios web, desarrollo de sistemas de gestión personalizados, entre otros."
+    },
+    {
+        "id": 2,
+        "question": "¿Ofrecen soporte y mantenimiento después del lanzamiento del proyecto?",
+        "response": "Sí, en ForgeXp creemos en construir relaciones a largo plazo con nuestros clientes. Ofrecemos paquetes de soporte y mantenimiento para asegurar que tu sitio web o sistema funcione sin problemas y esté siempre actualizado."
+    },
+    {
+        "id": 3,
+        "question": "¿Cómo es el proceso de desarrollo de un proyecto en ForgeXp?",
+        "response": "Nuestro proceso incluye una fase inicial de consulta para comprender tus necesidades, seguida de la planificación, diseño y desarrollo. Finalmente, el lanzamiento y mantenimiento continuo del proyecto."
+    },
+    {
+        "id": 4,
+        "question": "¿Pueden personalizar soluciones según las necesidades específicas de mi negocio?",
+        "response": "Absolutamente. Nos especializamos en crear soluciones a medida que se adaptan perfectamente a las necesidades y objetivos específicos de tu negocio."
+    },
+    {
+        "id": 5,
+        "question": "¿Cómo puedo solicitar un presupuesto para mi proyecto?",
+        "response": "Puedes contactarnos a través de nuestro formulario en la página de contacto, enviarnos un correo electrónico o whatsapp directamente. Estaremos encantados de discutir tu proyecto y proporcionarte un presupuesto detallado."
+    }
+]

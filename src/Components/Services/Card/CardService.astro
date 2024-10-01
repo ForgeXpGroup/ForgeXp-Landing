@@ -1,0 +1,102 @@
+---
+interface IFeatureList {
+  text: string;
+  valid: boolean;
+}
+
+interface Props {
+  title: string;
+  price: string;
+  personalized: boolean;
+  feature_list: IFeatureList[];
+}
+
+const { title, price, personalized, feature_list } = Astro.props;
+---
+
+<div
+  class="bg-[#395A6E] w-[350px] h-[460px] rounded-[32px] p-10 mb-5 sm:mx-5 md:mx-0 flex flex-col justify-between text-white-0 font-gabarito"
+>
+  <div class="flex flex-col space-y-3">
+    <h2 class="text-[30px] font-semibold text-center text-white-0">
+      {title}
+    </h2>
+
+    <p class="text-description text-[25px] text-white-0 font-semibold text-center">
+      {price}
+    </p>
+
+    <div class={`flex flex-col space-y-2 ${!personalized && "hidden"}`}>
+      {
+        feature_list.map((feature) => (
+          <li class={`list-none text-[17px] decoration-none ${feature.valid ? "" : "text-[#838383] line-through"}`}>
+            <input
+              type="checkbox"
+              name="selectedCheckbox"
+              value={feature.text}
+              class="mr-2 accent-black-0 w-4 h-4 bg-white-0 rounded border-black-0 checked:bg-black-0"
+            />
+            {feature.text}
+          </li>
+        ))
+      }
+    </div>
+
+    <ul class={`mb-4 space-y-2 ${personalized && "hidden"}`}>
+      {
+        feature_list.map((feature) => (
+          <li class={`list-disc list-inside text-[17px] ${feature.valid ? "" : "text-[#838383] line-through"}`}>
+            {feature.text}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+
+  <button
+    name={title}
+    class="px-5 py-3 bg-red-0 font-semibold rounded-full text-[20px] text-white-0 shadow-md shadow-black-0 openModalBtn"
+  >
+    ¡Comencemos!
+  </button>
+</div>
+<!-- Lógica para abrir/cerrar el modal usando JavaScript nativo -->
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("modal");
+    const elements = document.getElementsByClassName("openModalBtn");
+    const serviceTitle = document.getElementById("serviceTitle");
+
+    for (let elem of elements) {
+      elem.addEventListener("click", (e) => {
+        modal.classList.remove("hidden");
+        serviceTitle.innerHTML = e.target.name;
+        if (e.target.name !== "Personalizado") {
+          localStorage.setItem("selectedCheckbox", []);
+          localStorage.setItem("titleMembership", e.target.name);
+        } else {
+          localStorage.setItem("titleMembership", e.target.name);
+        }
+      });
+    }
+
+    closeModalBtn.addEventListener("click", () => {
+      modal.classList.add("hidden");
+    });
+
+    // Checkbox logic
+    let selectedCheckbox = [];
+    const checkboxes = document.querySelectorAll('input[name="selectedCheckbox"]');
+
+    checkboxes.forEach((checkbox) => {
+      checkbox?.addEventListener("click", () => {
+        if (checkbox.checked) {
+          selectedCheckbox?.push(checkbox.value);
+        } else {
+          selectedCheckbox = selectedCheckbox?.filter((option) => option !== checkbox.value);
+        }
+        localStorage.setItem("selectedCheckbox", JSON.stringify(selectedCheckbox));
+      });
+    });
+  });
+</script>

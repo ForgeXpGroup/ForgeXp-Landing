@@ -1,0 +1,9 @@
+---
+import MembersCard from "../MembersCard/MembersCard.astro";
+import usersData from "../UsersData/usersData.json";
+import Carousel from "../Carrusel/Carrusel";
+---
+
+<div class="flex flex-row overflow-hidden space-x-2 mx-auto h-[450px] md:h-[400px]">
+  <Carousel client:load data={usersData} autoplay={true} autoplayTime={3000} />
+</div>

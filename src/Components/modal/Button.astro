@@ -1,0 +1,11 @@
+---
+const { label, className = "" } = Astro.props;
+---
+
+<button
+    class={`flex items-center pr-6 pl-6 h-12 gap-3 w-44 justify-center font-medium text-xl ${className}`}
+>
+    <slot name="before" />
+    {label}
+    <slot name="after" />
+</button>

@@ -1,0 +1,83 @@
+[
+    {
+        "title": "Básico",
+        "price": "Desde AR$59.000",
+        "personalized": false,
+        "feature_list": [
+            {
+                "text": "Correción de bugs",
+                "valid": true
+            },
+            {
+                "text": "Mantenimiento estético y funcional",
+                "valid": true
+            },
+            {
+                "text": "Reunión con el equipo de desarrollo para revisar cambios",
+                "valid": true
+            },
+            {
+                "text": "Nuevas funcionalidades",
+                "valid": false
+            },
+            {
+                "text": "Mejoras de seguridad",
+                "valid": false
+            }
+        ]
+    },
+    {
+        "title": "Premium",
+        "price": "Desde $99.000",
+        "personalized": false,
+        "feature_list": [
+            {
+                "text": "Correción de bugs",
+                "valid": true
+            },
+            {
+                "text": "Mantenimiento estético y funcional",
+                "valid": true
+            },
+            {
+                "text": "Reunión con el equipo de desarrollo para revisar cambios",
+                "valid": true
+            },
+            {
+                "text": "Nuevas funcionalidades",
+                "valid": true
+            },
+            {
+                "text": "Mejoras de seguridad",
+                "valid": true
+            }
+        ]
+    },
+    {
+        "title": "Personalizado",
+        "price": "Desde $59.000",
+        "personalized": true,
+        "feature_list": [
+            {
+                "text": "Correción de bugs",
+                "valid": true
+            },
+            {
+                "text": "Mantenimiento estético y funcional",
+                "valid": true
+            },
+            {
+                "text": "Reunión con el equipo de desarrollo para revisar cambios",
+                "valid": true
+            },
+            {
+                "text": "Nuevas funcionalidades",
+                "valid": true
+            },
+            {
+                "text": "Mejoras de seguridad",
+                "valid": true
+            }
+        ]
+    }
+]
