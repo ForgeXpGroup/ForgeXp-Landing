@@ -2,22 +2,17 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/hero/Hero.astro";
 import AboutView from "../components/About/AboutView.astro";
-// import Section from "../components/Services/Section.astro";
+import Section from "../components/Services/Section.astro";
 import FAQs from "../components/FAQs/FAQs";
 import pregunta from "../components/FAQs/preguntas.json";
 import WhatsappButton from "../components/Whastsapp/WhatsappButton.astro";
 import ContactForm from "../components/ContactForm/ContactForm.astro";
-import OfertaDeServicios from "../components/Services/OfertaDeServicios/OfertaDeServicios.astro";
-import Contactanos from "../components/Services/Contactanos/Contactanos.astro";
 ---
 
 <Layout title="ForgeXP">
   <main class="relative">
     <Hero />
-    <section id="servicios" class="bg-[#395A6E] py-10">
-      <OfertaDeServicios />
-      <Contactanos />
-    </section>
+    <Section />
     <FAQs client:load questions={pregunta} />
     <AboutView />
     <ContactForm />
