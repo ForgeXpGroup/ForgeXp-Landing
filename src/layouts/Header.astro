@@ -1,99 +1,105 @@
 ---
-import DataWhatsapp from "../components/Whastsapp/DataWhatsapp.json"
+import DataWhatsapp from "../components/Whastsapp/DataWhatsapp.json";
 const { phone, message1, message2 } = DataWhatsapp.contactInfo;
 ---
 
-<header class="flex items-center justify-between px-6 h-[56px] text-[16px] font-gabarito w-full z-20 text-black-0 bg-white-0 font-semibold fixed ">
-    <a class="flex items-center" href="/">
-        <img src="/logo negro.svg">
-        <h1 class="text-[24px]">ForgeXP</h1>
-    </a>
-    <!-- MENU -->
-    <div class="flex items-center">
-        <div class="hidden md:flex items-center space-x-6 text-[20px]">
-            <a href="/#inicio">Inicio</a>
-            <a href="/#servicios">Servicios</a>
-            <a href="/#nosotros">Nosotros</a>
-            <a href="/#contacto">Contacto</a>
-        </div>
-
-        <button id="menuButton">
-            <img src="/menu.svg" class="flex md:hidden h-[25px]">
-        </button>
+<header
+  class="flex items-center justify-between px-6 h-[56px] text-[16px] font-gabarito w-full z-20 text-black-0 bg-white-0 font-semibold fixed"
+>
+  <a class="flex items-center" href="/">
+    <img src="/logo negro.svg" />
+    <h1 class="text-[24px]">ForgeXP</h1>
+  </a>
+  <!-- MENU -->
+  <div class="flex items-center">
+    <div class="hidden md:flex items-center space-x-6 text-[20px]">
+      <a href="/#inicio">Inicio</a>
+      <a href="/#servicios">Servicios</a>
+      <a href="/#nosotros">Nosotros</a>
+      <a href="/#contacto">Contacto</a>
     </div>
-    <!-- MENU DESPLEGABLE -->
-    <div id="showMenu" class="hidden md:hidden pt-10 top-0 -right-[600px] flex-col items-center space-y-4 p-4 opacity-0 text-[30px] absolute duration-300 w-screen h-screen bg-black-0 bg-opacity-85 text-white-0">
-        <button id="closeButton" class="absolute right-10">
-            <img src="/close.svg" class="flex md:hidden h-[25px]">
-        </button>
-        <div class="flex flex-col">
-            <a class="link" href="/#inicio">Inicio</a>
-            <a class="link" href="/#servicios">Servicios</a>
-            <a class="link" href="/#nosotros">Nosotros</a>
-            <a class="link" href="/#contacto">Contacto</a>
-        </div>
-            <div class="w-[80%] h-[4px] mx-auto bg-white-0"></div>
-        <div class="text-[20px] flex flex-col space-y-4">
-            <div class="flex space-x-2">
+
+    <button id="menuButton">
+      <img src="/menu.svg" class="flex md:hidden h-[25px]" />
+    </button>
+  </div>
+  <!-- MENU DESPLEGABLE -->
+  <div
+    id="showMenu"
+    class="hidden md:hidden pt-10 top-0 -right-[600px] flex-col items-center space-y-4 p-4 opacity-0 text-[30px] absolute duration-300 w-screen h-screen bg-black-0 bg-opacity-85 text-white-0"
+  >
+    <button id="closeButton" class="absolute right-10">
+      <img src="/close.svg" class="flex md:hidden h-[25px]" />
+    </button>
+    <div class="flex flex-col">
+      <a class="link" href="/#inicio">Inicio</a>
+      <a class="link" href="/#servicios">Servicios</a>
+      <a class="link" href="/#nosotros">Nosotros</a>
+      <a class="link" href="/#contacto">Contacto</a>
+    </div>
+    <div class="w-[80%] h-[4px] mx-auto bg-white-0"></div>
+    <div class="text-[20px] flex flex-col space-y-4">
+      <!-- <div class="flex space-x-2">
                 <img src="/logo instagram.svg">
                 <p>ForgeXP</p>
-            </div>
-            <div class="flex space-x-2">
-                <img src="/logo linkedin.svg">
-                <p>ForgeXP</p>
-            </div>
-            <div class="flex space-x-2">
-                <img src="/logo gmail.svg">
-                <p>forgexperience@gmail.com</p>
-            </div>
-            <div class="flex space-x-2">
-                <img src="/logo telefono.svg">
-                <p>+549123456789</p>
-            </div>
-        </div>
-        <div class="w-[80%] h-[4px] mx-auto bg-white-0"></div>
-        <div class="flex mx-7 space-x-3 items-center">
-            <p class="text-[25px]">¡Comunícate con nosotros!</p>
-            <a target="_blank" href={`https://wa.me/${phone}?text=${encodeURIComponent(message1)}`} >
-                <img src="/logo whatsapp.svg">
-            </a>
-        </div>
+            </div> -->
+      <div class="flex items-center space-x-2">
+        <a href="https://www.linkedin.com/company/forgexpit" class="flex items-center space-x-2">
+          <img src="/logo linkedin.svg" />
+          <p>ForgeXP</p>
+        </a>
+      </div>
+      <div class="flex space-x-2">
+        <img src="/logo gmail.svg" />
+        <p>forgexperience@gmail.com</p>
+      </div>
+      <div class="flex space-x-2">
+        <img src="/logo telefono.svg" />
+        <p>+549123456789</p>
+      </div>
     </div>
+    <div class="w-[80%] h-[4px] mx-auto bg-white-0"></div>
+    <div class="flex mx-7 space-x-3 items-center">
+      <p class="text-[25px]">¡Comunícate con nosotros!</p>
+      <a target="_blank" href={`https://wa.me/${phone}?text=${encodeURIComponent(message1)}`}>
+        <img src="/logo whatsapp.svg" />
+      </a>
+    </div>
+  </div>
 </header>
 
 <script>
-const button = document.querySelector('#menuButton');
-const close = document.querySelector('#closeButton');
-const showMenu = document.querySelector('#showMenu');
-const links = document.querySelectorAll('.link');
+  const button = document.querySelector("#menuButton");
+  const close = document.querySelector("#closeButton");
+  const showMenu = document.querySelector("#showMenu");
+  const links = document.querySelectorAll(".link");
 
-const toggleMenu = () => {
-    if (showMenu?.classList.contains('hidden')) {
-        // Mostrar el menú
-        showMenu.classList.remove('hidden');
-        setTimeout(() => {
-            showMenu.classList.remove('opacity-0', '-right-[600px]');
-            showMenu.classList.add('opacity-100', 'right-0');
-        }, 0); 
+  const toggleMenu = () => {
+    if (showMenu?.classList.contains("hidden")) {
+      // Mostrar el menú
+      showMenu.classList.remove("hidden");
+      setTimeout(() => {
+        showMenu.classList.remove("opacity-0", "-right-[600px]");
+        showMenu.classList.add("opacity-100", "right-0");
+      }, 0);
     } else {
-        // Ocultar el menú con animación
-        showMenu?.classList.add('opacity-0', '-right-[600px]');
-        showMenu?.classList.remove('opacity-100', 'right-0'); 
-        setTimeout(() => {
-            showMenu?.classList.add('hidden'); 
-        }, 300); 
+      // Ocultar el menú con animación
+      showMenu?.classList.add("opacity-0", "-right-[600px]");
+      showMenu?.classList.remove("opacity-100", "right-0");
+      setTimeout(() => {
+        showMenu?.classList.add("hidden");
+      }, 300);
     }
-};
+  };
 
-button?.addEventListener('click', toggleMenu);
-close?.addEventListener('click', toggleMenu);
-links.forEach(link => link.addEventListener('click', toggleMenu));
+  button?.addEventListener("click", toggleMenu);
+  close?.addEventListener("click", toggleMenu);
+  links.forEach((link) => link.addEventListener("click", toggleMenu));
 
-// Cierra el menú al hacer scroll si está abierto
-window.addEventListener('scroll', () => {
-    if (!showMenu?.classList.contains('hidden')) {
-        toggleMenu();
+  // Cierra el menú al hacer scroll si está abierto
+  window.addEventListener("scroll", () => {
+    if (!showMenu?.classList.contains("hidden")) {
+      toggleMenu();
     }
-});
-
+  });
 </script>
